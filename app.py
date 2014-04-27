@@ -13,8 +13,12 @@ def index():
     values = {'format':'html',
             'results_per_page':10}
     r = requests.get(urlEndPoint + imageGetPath + "?" +  urllib.urlencode(values))
-    return r.text
+    arr = r.text.split('\n')
+    result = ""
+    for tag in arr:
+        result += "<div>" + tag + "</div>"
+    result += ""
+    return result
 
 if __name__ == "__main__":
     app.run(port=8000)
-
