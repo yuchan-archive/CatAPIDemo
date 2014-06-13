@@ -1,4 +1,4 @@
-HerokuFlask
+CatAPIDemo
 ===========
 
 Flask App on Heroku
